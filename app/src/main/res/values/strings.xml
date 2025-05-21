@@ -24,4 +24,26 @@
     <string name="title_slim">Slim</string>
     <string name="title_normal">Normal</string>
     <string name="title_fat">Fat </string>
+    <string name="title_product">Product</string>
+    <string name="title_advanced_product">Advanced Product</string>
+    <string name="title_new_customer">New Customer\n</string>
+    <string name="title_broadcast_advertising">Broadcast Advertising</string>
+    <string name="title_help">Help</string>
+    <string name="title_customer_detail">Customer Detail\n</string>
+    <string name="title_customer_id">Customer ID:</string>
+    <string name="title_customer_name">Customer Name</string>
+    <string name="title_customer_email">Customer Email</string>
+    <string name="title_customer_phone">Customer Phone:</string>
+    <string name="title_new">NEW</string>
+    <string name="title_save">SAVE</string>
+    <string name="title_remove">REMOVE</string>
+    <string name="title_product_detail">Product Detail</string>
+    <string name="title_product_id">Product ID:</string>
+    <string name="title_product_name">Product Name:</string>
+    <string name="title_product_quantity">Product Quantity:</string>
+    <string name="title_product_price">Product Price:</string>
+    <string name="title_product_cate_id">Product Cate ID:</string>
+    <string name="title_product_description">Product Description:</string>
+    <string name="title_product_image_id">Product Image ID</string>
+    <string name="title_new_product">New Product</string>
 </resources>
