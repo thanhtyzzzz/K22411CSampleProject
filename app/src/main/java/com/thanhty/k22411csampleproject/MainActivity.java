@@ -14,8 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imgEmployee, imgCustomer, imgCategory, imgProduct;
-    TextView txtEmployee, txtCustomer, txtCategory, txtProduct;
+    ImageView imgEmployee, imgCustomer,  imgProduct;
+    TextView txtEmployee, txtCustomer, txtProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,30 +56,23 @@ public class MainActivity extends AppCompatActivity {
                 openCustomerManagementActivity();
             }
         });
-        imgCategory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCategoryActivity();
-            }
-        });
-        txtCategory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCategoryActivity();
-            }
-        });
         imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openProductActivity();
+                openProductManagementActivity();
             }
         });
         txtProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openProductActivity();
+                openProductManagementActivity();
             }
         });
+    }
+
+    private void openProductManagementActivity() {
+        Intent intent = new Intent(MainActivity.this, ProductManagementActivity.class);
+        startActivity(intent);
     }
 
     void openEmployeeManagementActivity() {
@@ -92,23 +85,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    void openCategoryActivity() {
-        Intent intent = new Intent(MainActivity.this, CategoryManagementActivity.class);
-        startActivity(intent);
-    }
 
-    void openProductActivity() {
-        Intent intent = new Intent(MainActivity.this, ProductManagementActivity.class);
-        startActivity(intent);
-    }
 
     private void addViews() {
-        imgEmployee = findViewById(R.id.imgEmployee);
-        txtEmployee = findViewById(R.id.txtEmployee);
+        imgEmployee = findViewById(R.id.imgProduct);
+        txtEmployee = findViewById(R.id.txtProduct);
         imgCustomer = findViewById(R.id.imgCustomer);
         txtCustomer = findViewById(R.id.txtCustomer);
-        imgCategory = findViewById(R.id.imgCategory);
-        txtCategory = findViewById(R.id.txtCategory);
         imgProduct = findViewById(R.id.imgProduct);
         txtProduct = findViewById(R.id.txtProduct);
     }
