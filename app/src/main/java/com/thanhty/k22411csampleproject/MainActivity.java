@@ -14,8 +14,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imgEmployee, imgCustomer,  imgProduct;
-    TextView txtEmployee, txtCustomer, txtProduct;
+    ImageView imgEmployee;
+    TextView txtEmployee;
+    ImageView imgCustomer;
+    TextView txtCustomer;
+    ImageView imgProduct;
+    TextView txtProduct;
+    ImageView imgAdvancedProduct;
+    TextView txtAdvancedProduct;
+    ImageView imgPaymentMethod;
+    TextView txtPaymentMethod;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +43,15 @@ public class MainActivity extends AppCompatActivity {
     private void addEvents() {
         imgEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                //gọi code mở màn hình quản trị nhân sự
                 openEmployeeManagementActivity();
             }
         });
         txtEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                //gọi code mở màn hình quản trị nhân sự
                 openEmployeeManagementActivity();
             }
         });
@@ -56,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 openCustomerManagementActivity();
             }
         });
+
         imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,31 +80,71 @@ public class MainActivity extends AppCompatActivity {
                 openProductManagementActivity();
             }
         });
+        imgAdvancedProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAdvancedProductManagementActivity();
+            }
+        });
+        txtAdvancedProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAdvancedProductManagementActivity();
+            }
+        });
+        imgPaymentMethod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPaymentMethodActivity();
+            }
+        });
+        txtPaymentMethod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPaymentMethodActivity();
+
+
+            }
+        });
     }
 
-    private void openProductManagementActivity() {
-        Intent intent = new Intent(MainActivity.this, ProductManagementActivity.class);
+    private void openPaymentMethodActivity() {
+        Intent intent=new Intent(MainActivity.this, PaymentMethodActivity.class);
         startActivity(intent);
     }
 
-    void openEmployeeManagementActivity() {
-        Intent intent = new Intent(MainActivity.this, EmployeeManagementActivity.class);
+    private void openAdvancedProductManagementActivity() {
+        Intent intent=new Intent(MainActivity.this, AdvancedProductManagementActivity.class);
         startActivity(intent);
     }
 
-    void openCustomerManagementActivity() {
-        Intent intent = new Intent(MainActivity.this, CustomerManagementActivity.class);
+    void openEmployeeManagementActivity()
+    {
+        Intent intent=new Intent(MainActivity.this, EmployeeManagementActivity.class);
+        startActivity(intent);
+    }
+    void openCustomerManagementActivity()
+    {
+        Intent intent=new Intent(MainActivity.this, CustomerManagementActivity.class);
         startActivity(intent);
     }
 
-
+    void openProductManagementActivity()
+    {
+        Intent intent=new Intent(MainActivity.this, ProductManagementActivity.class);
+        startActivity(intent);
+    }
 
     private void addViews() {
-        imgEmployee = findViewById(R.id.imgProduct);
-        txtEmployee = findViewById(R.id.txtProduct);
-        imgCustomer = findViewById(R.id.imgCustomer);
-        txtCustomer = findViewById(R.id.txtCustomer);
-        imgProduct = findViewById(R.id.imgProduct);
-        txtProduct = findViewById(R.id.txtProduct);
+        imgEmployee=findViewById(R.id.imgEmployee);
+        txtEmployee=findViewById(R.id.txtEmployee);
+        imgCustomer=findViewById(R.id.imgCustomer);
+        txtCustomer=findViewById(R.id.txtCustomer);
+        imgProduct=findViewById(R.id.imgProduct);
+        txtProduct=findViewById(R.id.txtProduct);
+        imgAdvancedProduct=findViewById(R.id.imgOrder);
+        txtAdvancedProduct=findViewById(R.id.txtOrder);
+        imgPaymentMethod=findViewById(R.id.imgPaymentMethod);
+        txtPaymentMethod=findViewById(R.id.txtPaymentMethod);
     }
 }
